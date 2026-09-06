@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Still — Little memory objects</title>
+    <meta
+      name="description"
+      content="Turn ordinary photos into little memory objects. Create prints, stacks, photobooth strips and hanging keepsakes."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="application-name" content="Still" />
+    <meta name="theme-color" content="#d5a0ad" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Still" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <meta property="og:title" content="Still — Little memory objects" />
+    <meta
+      property="og:description"
+      content="Turn ordinary photos into little memory objects. Create prints, stacks, photobooth strips and hanging keepsakes."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Still" />
+    <meta property="og:image" content="assets/still-icon.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1254" />
+    <meta property="og:image:height" content="1254" />
+    <meta property="og:image:alt" content="Still pink camera app icon" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Still — Little memory objects" />
+    <meta
+      name="twitter:description"
+      content="Turn ordinary photos into little memory objects. Create prints, stacks, photobooth strips and hanging keepsakes."
+    />
+    <meta name="twitter:image" content="assets/still-icon.png" />
+    <meta name="twitter:image:alt" content="Still pink camera app icon" />
+
+    <!-- Add canonical and og:url tags here once the production domain is known. -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/still-icon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/still-icon-180.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Still",
+        "applicationCategory": "PhotographyApplication",
+        "operatingSystem": "Web",
+        "description": "Turn ordinary photos into little memory objects. Create prints, stacks, photobooth strips and hanging keepsakes."
+      }
+    </script>
+  </head>
+  <body>
+    <div class="app-splash" id="appSplash" aria-hidden="true"><img src="assets/still-icon-192.png" alt="" width="96" height="96"><span>still</span></div>
+    <main class="app-shell">
+      <section class="app-screen upload-screen" id="uploadScreen" aria-labelledby="uploadHeading" tabindex="-1">
+        <header class="screen-header"><span class="wordmark">still <span class="wordmark-heart" aria-hidden="true">♡</span></span><span class="screen-progress">1 / 3 · photos</span></header>
+        <div class="screen-content upload-content">
+          <div class="upload-intro"><p class="eyebrow">little things, kept.</p><h1 id="uploadHeading">make a memory</h1><p>a few photos. something to keep.</p></div>
+          <fieldset class="selector-group layout-selector"><legend>how shall we keep it?</legend><div class="layout-options">
+<label><input type="radio" name="layout" value="single" checked><span><svg viewBox="0 0 64 66" aria-hidden="true"><path d="M15 7h35v49H15z M20 12h25v29H20z"/></svg>Single</span></label><label><input type="radio" name="layout" value="stack" ><span><svg viewBox="0 0 64 66" aria-hidden="true"><path d="m10 9 30-4 6 40-30 4z M26 21l29 4-5 36-29-4z M30 27l20 3-3 21-20-3z"/></svg>Stack</span></label><label><input type="radio" name="layout" value="strip" ><span><svg viewBox="0 0 64 66" aria-hidden="true"><path d="M22 3h24v60H22z M26 8h16v12H26z M26 24h16v12H26z M26 40h16v12H26z"/></svg>Strip</span></label><label><input type="radio" name="layout" value="hanging" ><span><svg viewBox="0 0 64 66" aria-hidden="true"><path d="M3 12Q32 30 61 12 M10 23l19 3-4 26-19-3z M39 25l18-4 5 26-18 4z M19 18v11 M48 18v10"/></svg>Hanging</span></label>
+          </div></fieldset>
+          <fieldset class="selector-group variation-selector"><legend>variation</legend><div class="selector-options" id="uploadVariations"></div></fieldset>
+          <div class="upload-area" id="uploadArea"><input id="photoInput" type="file" accept="image/*"><label for="photoInput"><span id="batchLabel">choose a photo</span><small>JPG, PNG or WEBP · drop here too</small></label></div>
+          <div class="photo-slots"><label class="photo-slot"><input type="file" accept="image/*" data-photo-index="0"><span class="slot-number">01</span><img alt="" hidden><span class="slot-label">choose photo</span><span class="slot-plus" aria-hidden="true">+</span></label><label class="photo-slot"><input type="file" accept="image/*" data-photo-index="1"><span class="slot-number">02</span><img alt="" hidden><span class="slot-label">choose photo</span><span class="slot-plus" aria-hidden="true">+</span></label><label class="photo-slot"><input type="file" accept="image/*" data-photo-index="2"><span class="slot-number">03</span><img alt="" hidden><span class="slot-label">choose photo</span><span class="slot-plus" aria-hidden="true">+</span></label><label class="photo-slot"><input type="file" accept="image/*" data-photo-index="3"><span class="slot-number">04</span><img alt="" hidden><span class="slot-label">choose photo</span><span class="slot-plus" aria-hidden="true">+</span></label></div>
+          <p class="upload-hint" id="uploadHint"></p><button id="continueButton" type="button" disabled>Make it yours →</button>
+          <p class="status" id="status" role="status"></p><p class="privacy-note">your photos stay on your device.</p>
+        </div>
+      </section>
+      <section class="app-screen customize-screen" id="customizeScreen" aria-label="Make it yours" tabindex="-1" hidden>
+        <header class="screen-header"><button class="back-button" id="backButton" type="button">← Photos</button><span class="screen-progress">2 / 3 · make it yours</span></header>
+        <div class="screen-content customize-content">
+          <div class="preview-host" id="previewHost"><div class="print-reveal" id="printReveal"><figure class="print-object" id="printObject"><canvas id="photoCanvas" aria-label="Your memory preview"></canvas></figure></div></div>
+          <div class="missing-photos" id="missingPhotos" hidden><p>A little more room for memories.</p><button class="text-button" id="addPhotosButton" type="button">Choose the extra photos →</button></div>
+          <fieldset class="selector-group"><legend>layout <em id="layoutName">single</em></legend><div class="selector-options" id="customVariations"></div></fieldset>
+          <fieldset class="selector-group"><legend>style</legend><div class="selector-options style-options"><label><input type="radio" name="frameStyle" value="classic" checked><span>Classic</span></label><label><input type="radio" name="frameStyle" value="scrapbook" ><span>Scrapbook</span></label><label><input type="radio" name="frameStyle" value="messy" ><span>Messy</span></label></div></fieldset>
+          <details class="edit-section" id="editPanel"><summary>edit photos <span>optional</span></summary>
+            <div class="edit-heading"><span>same edits on every photo</span><button class="text-button" id="resetEdits" type="button">reset edits</button></div>
+            <div id="editTools" class="edit-tools" role="group" aria-label="Photo adjustment tools"></div>
+            <div class="slider-row"><input type="range" id="editSlider" min="-100" max="100" value="0"><output id="toolValue" for="editSlider">Light 0</output></div>
+          </details>
+          <label class="caption-field" for="caption"><span>caption <em>optional</em></span><input id="caption" type="text" maxlength="160" autocomplete="off" enterkeyhint="done" placeholder="a little note to remember…"></label>
+          <div class="develop-action"><button id="developButton" type="button">Develop my memory</button></div>
+          <p class="status" id="customStatus" role="status"></p>
+        </div>
+      </section>
+      <section class="app-screen developing-screen" id="developingScreen" aria-label="Developing your memory" aria-busy="false" tabindex="-1" hidden>
+        <div class="developing-content" id="developingContent"><p class="developing-text" role="status">developing...</p>
+          <div class="camera" aria-hidden="true"><span class="camera-flash"></span><span class="camera-lens"></span><span class="camera-light"></span><span class="camera-slot"></span></div>
+          <div class="developing-print-host" id="developingPrintHost"></div>
+        </div>
+      </section>
+      <section class="app-screen result-screen" id="resultScreen" aria-label="Your finished memory" tabindex="-1" hidden>
+        <header class="screen-header result-header"><button class="back-button" id="editButton" type="button">← Edit</button><span class="screen-progress">3 / 3 · yours to keep</span></header>
+        <div class="result-photo-host" id="resultPhotoHost"></div>
+        <div class="result-actions"><button id="saveButton" type="button">Save memory</button><button class="try-again-button" id="tryAgainButton" type="button">Try another</button></div>
+        <p class="status" id="resultStatus" role="status"></p>
+      </section>
+    </main>
+    <script src="renderer.js"></script><script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "Still",
+  "short_name": "Still",
+  "description": "Turn ordinary photos into little memory objects. Create prints, stacks, photobooth strips and hanging keepsakes.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f0e8",
+  "theme_color": "#d5a0ad",
+  "icons": [
+    {
+      "src": "assets/still-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/still-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/still-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
