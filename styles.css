@@ -696,6 +696,9 @@ legend em, .edit-heading em { margin-left: 8px; color: #907b73; font-size: 11px;
 .camera-flash { width: 8%; height: 12%; }
 .result-photo-host { margin: 0 auto; }
 .result-actions button, .result-actions #saveButton { min-height: 44px; font-size: 13px; }
+@media (max-width: 600px) {
+  .result-photo-host[data-layout="strip"] { width: 60vw; max-width: 270px !important; }
+}
 @media (max-height: 730px) { .preview-host { height: 160px; } .customize-content { gap: 13px; } .upload-content { padding-top: 15px; } }
 
 /* Phone-first: quiet default controls, comfortable targets, and safe scrolling. */

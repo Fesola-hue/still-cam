@@ -169,6 +169,7 @@ function finishDeveloping(run) {
   clearTimeout(developmentFallback);
   $("#developingScreen").classList.remove("is-printing", "is-preparing");
   $("#developingScreen").setAttribute("aria-busy", "false");
+  $("#resultPhotoHost").dataset.layout = state.layout;
   $("#resultPhotoHost").appendChild(printReveal);
   hasDeveloped = true; $("#developButton").disabled = false; showScreen("resultScreen");
   fitPrintToViewport();
